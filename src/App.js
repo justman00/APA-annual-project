@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Box } from '@chakra-ui/react';
 
-function App() {
+import ProvideAuth from './providers/authProvider';
+import PrivateRoute from './wrappers/PrivateRoute';
+import CreateAccount from './pages/CreateAccount';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box maxW="480px" m="0 auto" bgColor="gray.100">
+      <ProvideAuth>
+        <Router>
+          <Switch>
+            <Route path="/create-account">
+              <CreateAccount />
+            </Route>
+            <PrivateRoute path="/">
+              <div>nice</div>
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </ProvideAuth>
+    </Box>
   );
 }
-
-export default App;
