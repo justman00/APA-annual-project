@@ -27,3 +27,9 @@ export const ITEMS = [
     img: '',
   },
 ];
+
+export const RESULTS = [
+  { name: 'orange', cat: 'fruits', displayName: 'Orange' },
+  { name: 'apple', cat: 'fruits', displayName: 'Apple' },
+  { name: 'icecream', cat: 'frozen', displayName: 'Ice Cream' },
+];

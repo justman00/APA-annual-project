@@ -16,7 +16,7 @@ function CreateAccount() {
   let location = useLocation();
   let auth = useAuth();
 
-  let { from } = location.state || { from: { pathname: '/' } };
+  let { from } = { from: { pathname: '/produse' } };
   let login = (e) => {
     e.preventDefault();
     auth.signin(() => {
