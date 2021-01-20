@@ -8,12 +8,11 @@ import {
   Input,
   Button,
 } from '@chakra-ui/react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import useAuth from '../hooks/use-auth';
 
 function CreateAccount() {
   let history = useHistory();
-  let location = useLocation();
   let auth = useAuth();
 
   let { from } = { from: { pathname: '/produse' } };

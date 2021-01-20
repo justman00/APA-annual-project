@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { ITEMS } from '../contants/data';
 import { Flex, Heading, Box, Checkbox } from '@chakra-ui/react';
 import { itemContext } from '../providers/itemsProvider';
-import { css } from '@emotion/react';
 
 function ProduseAlegere() {
   const { id } = useParams();
